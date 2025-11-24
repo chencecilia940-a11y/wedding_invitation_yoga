@@ -41,16 +41,12 @@
 
     <div class="film-grain"></div>
 
-    <!-- 
-       直接展示宾客页面 (Guest View)
-       不需要制作端了，因为信息已经写死
-    -->
     <div id="guest-page" class="page active pb-20">
         
         <!-- 1. 封面 -->
         <header class="h-screen relative flex items-end justify-center pb-20 overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <!-- 封面图：直接读取本地 p1.jpeg -->
+                <!-- 封面图 p1.jpeg -->
                 <img src="./p1.jpeg" class="w-full h-full object-cover opacity-60 filter contrast-125 saturate-150">
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
             </div>
@@ -60,6 +56,7 @@
                 <h1 class="text-6xl font-bold text-white mb-4 handwriting neon-text">
                     志明 & 春娇
                 </h1>
+                <!-- 歌词：兜圈 -->
                 <div class="flex items-center justify-center gap-3 text-slate-200 font-light italic text-sm md:text-lg">
                     <i class="fas fa-music text-purple-500 text-xs"></i>
                     <span>“不知不觉兜了一圈，并在终点等你”</span>
@@ -77,9 +74,10 @@
                 <div class="w-16 h-16 bg-gradient-to-tr from-purple-600 to-blue-600 rounded-full flex items-center justify-center shrink-0 vinyl-spin shadow-[0_0_15px_rgba(147,51,234,0.5)]">
                     <div class="w-6 h-6 bg-slate-900 rounded-full"></div>
                 </div>
+                <!-- 歌词：少女 -->
                 <blockquote class="text-lg text-slate-300 font-light border-l-4 border-purple-500 pl-4">
                     "Baby 做我的爱妻，一百岁还是少女。<br>
-                    有些爱，像抽烟一样，戒不掉。"
+                    想要买一栋房子，我们要黏在一起。"
                 </blockquote>
             </div>
 
@@ -87,22 +85,29 @@
                 <!-- 照片2: p2.jpeg -->
                 <div class="photo-card relative group rounded-xl overflow-hidden aspect-[4/3] md:mt-10">
                     <img src="./p2.jpeg" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                        <span class="text-white handwriting text-xl">路过人间</span>
+                    <!-- 歌词修正：诱 -->
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center flex-col">
+                        <span class="text-white handwriting text-xl mb-1">像颗糖好诱人</span>
+                        <span class="text-purple-300 text-xs tracking-widest uppercase">— Yoga Lin —</span>
                     </div>
                 </div>
+                
                 <!-- 照片3: p3.jpeg -->
                 <div class="photo-card relative group rounded-xl overflow-hidden aspect-[4/3]">
                     <img src="./p3.jpeg" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                        <span class="text-white handwriting text-xl">神秘嘉宾</span>
+                    <!-- 歌词修正：神秘嘉宾 -->
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center flex-col">
+                        <span class="text-white handwriting text-xl mb-1">唯有你明白</span>
+                        <span class="text-purple-300 text-xs tracking-widest uppercase">My Mystery Guest</span>
                     </div>
                 </div>
-                <!-- 照片4: p4.jpeg (请确保你有这张图) -->
+                
+                <!-- 照片4: p4.jpeg -->
                 <div class="photo-card relative group rounded-xl overflow-hidden aspect-video md:col-span-2">
                     <img src="./p4.jpeg" class="w-full h-full object-cover">
+                    <!-- 歌词修正：少女 -->
                     <div class="absolute bottom-4 right-4 bg-black/60 px-3 py-1 rounded text-xs text-white">
-                        From 2010 to 2025
+                        “我们要黏在一起”
                     </div>
                 </div>
             </div>
@@ -119,7 +124,6 @@
                     </h2>
                     
                     <div class="space-y-6">
-                        <!-- 这里的日期已经写死 -->
                         <div class="flex flex-col items-center">
                             <span class="text-slate-400 text-xs uppercase tracking-wider mb-1">DATE & TIME</span>
                             <span class="text-2xl text-purple-200 font-serif">2025年12月20日</span>
@@ -128,7 +132,6 @@
 
                         <hr class="border-slate-700 w-1/2 mx-auto">
 
-                        <!-- 地点 (点击跳转) -->
                         <div class="flex flex-col items-center group cursor-pointer" onclick="openMap()">
                             <span class="text-slate-400 text-xs uppercase tracking-wider mb-2">LOCATION</span>
                             <div class="bg-slate-700/50 p-4 rounded-xl border border-slate-600 group-hover:border-purple-500 transition w-full">
@@ -140,7 +143,6 @@
                     </div>
                 </div>
                 
-                <!-- 装饰光晕 -->
                 <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-purple-600 rounded-full blur-[80px] opacity-20"></div>
                 <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-blue-600 rounded-full blur-[80px] opacity-20"></div>
             </div>
@@ -148,6 +150,8 @@
 
         <!-- Footer -->
         <footer class="text-center text-slate-500 text-xs mt-8 pb-8">
+            <!-- 歌词：全世界谁倾听你 -->
+            <p class="mb-3 italic">“多谢你如此精彩耀眼，做我平淡岁月里星辰”</p>
             <p class="mb-2">我们等你，不见不散</p>
             <div class="w-8 h-8 mx-auto border border-slate-600 rounded-full flex items-center justify-center">
                 <span class="text-[10px]">Y</span>
@@ -162,13 +166,10 @@
 
     <script>
         // 定义地图跳转逻辑
-        // 因为地点也是写死的，所以这里直接填入地点名称
         const targetLocation = "北京王府井金茂万丽酒店";
 
         function openMap() {
             const query = encodeURIComponent(targetLocation);
-            // 优先尝试高德地图/Google地图搜索协议
-            // 在手机浏览器点击通常会唤起App或跳到网页地图
             const url = `https://www.google.com/maps/search/?api=1&query=${query}`;
             window.open(url, '_blank');
         }
